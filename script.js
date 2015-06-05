@@ -1,4 +1,5 @@
-document.onload = function addElement(){
+function addElement(){
+	document.body.innerHTML = "";
 	for (var i = 0; i < 99; i++){
 		var r = Math.floor(Math.random() * 255);
 		var g = Math.floor(Math.random() * 255);
@@ -13,4 +14,7 @@ document.onload = function addElement(){
 			document.body.appendChild(newDiv);
 		
 	}
-}();
+}
+addElement();
+
+window.setInterval(addElement, 2000); 
